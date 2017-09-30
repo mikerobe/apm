@@ -18,7 +18,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getProduct(+this._route.snapshot.paramMap.get('id'))
+    this.getProduct(+this._route.snapshot.paramMap.get('id'));
   }
 
   onBack() {
@@ -29,7 +29,7 @@ export class ProductDetailComponent implements OnInit {
     this._productService.getProduct(id).subscribe(
       product => this.product = product,
       error => this.errorMessage = error
-    )
+    );
   }
 
 

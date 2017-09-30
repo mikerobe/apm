@@ -34,9 +34,9 @@ export class ProductListComponent implements OnInit {
         this.filteredProducts = this.products;
       },
       error => {
-        this.errorMessage = error
+        this.errorMessage = error;
       }
-    )
+    );
   }
 
   toggleImage(): void {
@@ -44,7 +44,7 @@ export class ProductListComponent implements OnInit {
   }
 
   performFilter(filter: string): IProduct[] {
-    filter = filter.toLocaleLowerCase()
+    filter = filter.toLocaleLowerCase();
     return this.products.filter( (product: IProduct) => product.productName.toLocaleLowerCase().indexOf(filter) !== -1);
   }
 
