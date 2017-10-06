@@ -37,7 +37,7 @@ export class ProductListComponent implements OnInit {
         this.errorMessage = error;
       }
     );
-  }
+}
 
   toggleImage(): void {
     this.showImage = !this.showImage;
