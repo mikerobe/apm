@@ -5,12 +5,13 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import { ProductService } from './product.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { RouterTestingModule } from '@angular/router/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-fdescribe('ProductListComponent', () => {
+describe('ProductListComponent', () => {
   let component: ProductListComponent;
   let fixture: ComponentFixture<ProductListComponent>;
   let nativeElement: HTMLElement;
@@ -49,13 +50,13 @@ fdescribe('ProductListComponent', () => {
       ],
       imports: [
         FormsModule,
-        ReactiveFormsModule,
         RouterTestingModule,
         SharedModule,
       ],
       providers: [
         { provide: ProductService, useValue: mockProductService },
       ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
       .compileComponents();
   }));
