@@ -31,11 +31,11 @@ describe('StarComponent', () => {
         });
 
         it('should allow customization of each spy method', () => {
-            const foo: {[key: string]: jasmine.Spy; } = jasmine.createSpyObj('foo', ['method', 'method2']);
+            const foo: { [key: string]: jasmine.Spy; } = jasmine.createSpyObj('foo', ['method', 'method2']);
             foo['method'].and.returnValue(44);
             foo['method2'].and.returnValues(true, false);
 
-            expect(foo.method()).toBe(45);
+            expect(foo.method()).toBe(44);
             expect(foo.method2()).toBe(true);
             expect(foo.method2()).toBe(false);
         });
