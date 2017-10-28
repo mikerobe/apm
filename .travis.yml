@@ -22,3 +22,6 @@ deploy:
   region: us-east-2
   skip_cleanup: true
   local_dir: dist
+notifications:
+  slack:
+    secure: GmMZbJ/pqpfp5r13NoueotUboQdQHu21Zxov916EMa+DDmU/aXllbmdkyB/257OVXOk/w9DMZEg7h3ry+ef6roWd+DgHWOOsZJb9T9m69TcEX5y2a/beShaKjJb88L173u72HwKV+8DszalwxASZN0hJdmIe+8IL3catVf23WMUSUwHMbegJ5fmMKRWJv1tO6Gtw512IWsl5E9HkxRs5fLB+wcKdBIiG1fT4I4VcuII5hMEg5IA1iHc0Gm+jhRuACmTiNDa56lYk/Nby8DLiDZ+PnlxK/hMUFz7VBi+y1NWWMhOJhePu654G+2PCE+erEv+3HThLgNWseDGdGcW5ntGco2AcL1NhK5QxJDUB26DnHUxZCTqjdzu8vdgdB1FLrQbmb+bAccYeKbGShiTw3rzbi3rcVGsQqy+H3WlQjp4PCPR4lK/j5yHuohityFi5FyAjEk2YBx7S/7+MEzaJs0sHPGrKl6Pr80yvKucXF/NxQnV+GVut5wxATuYNUMBwSOS0W3s04+EHjXJZVfVseQBP3nWBgWntL1TCi/lBXBmkXeAzV06kNfnMCY+1n0zPRnEwvbp8ECcKtmYrhm7tHyOiV+wtxq3ze5nQwQ+0jlWX/i8uGwS0cIcbvBKJ4WC/0yVoHJXIgDVFExuUNMZAVn6EH/2wFtHQhuftpB0HmsQ=
