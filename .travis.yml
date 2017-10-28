@@ -21,3 +21,4 @@ deploy:
     branch: travis_karma
   region: us-east-2
   skip_cleanup: true
+  local_dir: dist
