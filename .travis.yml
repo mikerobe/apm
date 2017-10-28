@@ -1,12 +1,17 @@
----
 language: node_js
 node_js:
-  - "node"
+- node
 cache:
   directories:
-    - "node_modules"
+  - node_modules
   yarn: true
 before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+deploy:
+  provider: s3
+  access_key_id: AKIAJEU4IY3RF52QMP7A
+  secret_access_key:
+    secure: GQB5VpHfj4Wu32HzYYv3IqYCT8BMzq756q6eDZ6KgHGDQDBJiIXko07yJa/qoLZETCgyF9bSIHO2omMqUJSRFpuMTbtuomQZHhAwoZ36JBdfO5wDrpcmtYSWtjg+m/1oqpyMmfEr+vGPnI1WjBYRujtpJEcf4SpRU9x+W+acx0Sd32ZPqCcTTbLKRaxCRm9CgBXupE2hzUEsQrtvVy6LNK5aysWUyFjytYJ83xRuZuH7pkrKs978T3fcaQFlzt8qJ090/ZptQ4+3TIeS2doK4XKQOESo4VIvQ764X8oaSAs7T5BsZWgum8LO0AQbwFmH4Zd8IEJtlIBaQ58PyDfgoQnkyXdIjoOZ0hMBZvY7byQ3lF0ZB3gS2ZKkFtSMYzLFWDm0WxsFn5TnCvBW3O4SRK6IbzKkJExeGuFzik9H/9tcC+31Y7Di+ZJkaVwrGDV20n6XQwfOLf+Qio2jkTUUCEJGfV1BJWO6LHzV6P7jTgJzt2W1eMSY/Tmn1RRwfzdTHpp+H7RZPVLGQYO3dTJ+i4HiLfFhXn9plQbffWvMpC3eDFYP9pFH5kzNxvaRPH3KeFdTdls68odSJVV8+QcKymJ2+BrFTKj4nXLBAgYlMQ+EsmcBGv3rmfgCSKvLX4lBPLvqH5JlTUcxPPcWYVBVZxHNK2CIOuLUhj92+ZRvdy0=
+  bucket: la.iris.bucket
