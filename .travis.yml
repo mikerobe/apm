@@ -17,3 +17,4 @@ deploy:
   bucket: la.iris.bucket
   on:
     branch: travis_karma
+  region: us-east-2
