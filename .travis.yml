@@ -20,3 +20,4 @@ deploy:
   on:
     branch: travis_karma
   region: us-east-2
+  skip_cleanup: true
