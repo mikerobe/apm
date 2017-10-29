@@ -10,7 +10,7 @@ before_script:
 - sh -e /etc/init.d/xvfb start
 - sleep 3
 after_success:
-- yarn run build
+- yarn run build --prod
 deploy:
   provider: s3
   access_key_id: AKIAJEU4IY3RF52QMP7A
